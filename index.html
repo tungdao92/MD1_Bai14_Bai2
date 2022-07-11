@@ -6,21 +6,35 @@
 </head>
 <body>
 <script>
-function nhietDo(doC) {
-    this.doC = doC;
-    this.getDoC = function () {
+// function NhietDo(doC) {
+//     this.doC = doC;
+//     this.getDoC = function () {
+//         return this.doC
+//     }
+//     this.getDoF = function () {
+//         return doC*1.8+32
+//     }
+//     this.getDoK = function () {
+//         return doC+273.15
+//     }
+//
+// }
+class Nhietdo{
+    constructor(doC) {
+        this.doC = doC;
+    }
+    getDoC(){
         return this.doC
     }
-    this.getDoF = function () {
-        return doC*1.8+32
+    getDoF(){
+        return this.doC*1.8+32
     }
-    this.getDoK = function () {
-        return doC+273.15
+    getDoK(){
+        return this.doC+273.15
     }
-
 }
 let a = +prompt('Nhiệt độ')
-let nhietdo = new nhietDo(a);
+let nhietdo = new Nhietdo(a);
 if (a>-273){
     doc = nhietdo.getDoC();
     dof = nhietdo.getDoF();
